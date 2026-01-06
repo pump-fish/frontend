@@ -1,4 +1,10 @@
 export default function Home() {
+  const projectStartDate = new Date("2026-01-06");
+  const today = new Date();
+  const diffTime = Math.abs(today.getTime() - projectStartDate.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const caCode = "xxxxxxxxxxxxx";
+
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Header */}
@@ -7,9 +13,11 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-white">Pump</h1>
             <div className="text-sm text-gray-400">
-              <span className="font-medium">Day 38</span>
+              <span className="font-medium">Day {diffDays}</span>
               <span className="mx-2">·</span>
-              <span>Channa sp. "Fire & Ice" Project</span>
+              <span>Snakehead Project</span>
+              <span className="mx-2">·</span>
+              <span>CA: {caCode}</span>
             </div>
           </div>
         </div>
@@ -24,7 +32,7 @@ export default function Home() {
             <div className="bg-gray-800 rounded-lg border border-gray-700 p-3">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-lg font-semibold text-white">
-                  Live View - Channa sp. "Fire & Ice"
+                  Live View - Snakehead
                 </h2>
                 <span className="text-xs text-gray-300 bg-gray-700 px-2 py-1 rounded">
                   Live
@@ -140,7 +148,7 @@ export default function Home() {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-400">Species</span>
-                  <span className="font-medium text-white">Channa sp. "Fire & Ice"</span>
+                  <span className="font-medium text-white">Snakehead</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Origin</span>
@@ -152,7 +160,9 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Temperament</span>
-                  <span className="font-medium text-orange-400">Aggressive</span>
+                  <span className="font-medium text-orange-400">
+                    Aggressive
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-400">Status</span>
